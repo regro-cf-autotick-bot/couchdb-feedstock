@@ -1,5 +1,5 @@
 {% set name = "couchdb" %}
-{% set version = "3.2.2" %}
+{% set version = "3.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   - url: https://couchdb.neighbourhood.ie/downloads/{{ version }}/win/apache-couchdb-{{ version }}.msi  # [win]
-    sha256: f7d354d5ede02d2af748f8d3230bd46b9c3e70e7cd6430ddf2095916d260060e  # [win]
+    sha256: c5e3953c334fa980b38d0ec67f5a882b9bb9382b3609c248d8b62d4b2dd39588  # [win]
   - url: https://archive.apache.org/dist/couchdb/source/{{ version }}/apache-couchdb-{{ version }}.tar.gz  # [unix]
-    sha256: 69c9fd6f80133557f68a02e92dda72a4fd646d646f429f45bb8329a30f82f20e  # [unix]
+    sha256: 9b89d7b54f7ef52b42bd51a6a0a2d3b1b06cce395df2c99d8f1f47f9355e2bee  # [unix]
 
 build:
-  number: 3
+  number: 0
 
 requirements:
   build:
