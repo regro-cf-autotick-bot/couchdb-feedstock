@@ -7,8 +7,6 @@ package:
 source:
   url: https://archive.apache.org/dist/couchdb/source/{{ version }}/apache-couchdb-{{ version }}.tar.gz
   sha256: d27ff2a13356000296a98ab884caf3d175927cf21727963ff90fab3a747544cf
-  # patches:
-  #   - fixup_spidermonkey_search.patch
 
 build:
   number: 0
