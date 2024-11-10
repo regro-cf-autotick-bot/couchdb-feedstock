@@ -9,8 +9,8 @@ export CFLAGS="-I$PREFIX/include -I$PREFIX/include/mozjs-91 -I$PREFIX/lib/erlang
 export LDFLAGS="-L$PREFIX/lib"
 export ERL_CFLAGS="$CFLAGS"
 export ERL_LDFLAGS="$LDFLAGS"
-./configure --erlang-md5 --spidermonkey-version 91
-make release
+./configure --erlang-md5
+make release -j${CPU_COUNT}
 
 install -dm755 $PREFIX/lib
 cp -r rel/couchdb $PREFIX/lib/couchdb
