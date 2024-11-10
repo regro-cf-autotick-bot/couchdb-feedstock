@@ -9,6 +9,8 @@ export CFLAGS="-I${PREFIX}/include -I${PREFIX}/include/mozjs-91 -I${PREFIX}/lib/
 export LDFLAGS="-L${PREFIX}/lib"
 export ERL_CFLAGS="${CFLAGS}"
 export ERL_LDFLAGS="${LDFLAGS}"
+# Make sure to set HOST_CC otherwise gcc is assumed
+export HOST_CC=${CC_FOR_BUILD}
 ./configure --erlang-md5
 make release
 
