@@ -11,7 +11,7 @@ source:
   #   - fixup_spidermonkey_search.patch
 
 build:
-  number: 3
+  number: 0
   # windows should also be compiled from source
   # binary repackaging is not the preferred method at conda-forge
   skip: true  # [win]
