@@ -20,6 +20,8 @@ requirements:
     - {{ stdlib('c') }}      # [unix]
     - {{ compiler('cxx') }}  # [unix]
     - make                   # [unix]
+    # They git clone stuff... grrrrr.
+    - git                    # [unix]
   host:
     - erlang        # [unix]
     - openssl       # [unix]
