@@ -13,8 +13,7 @@ sed -i.bak "s|HOST_CC=.*|HOST_CC=${CC_FOR_BUILD}|g" src/couch_quickjs/quickjs/Ma
 sed -i.bak "s|CC=..CROSS_PREFIX.gcc|CC=${CC}|g" src/couch_quickjs/quickjs/Makefile
 sed -i.bak "s|AR=..CROSS_PREFIX.gcc-ar|AR=${AR}|g" src/couch_quickjs/quickjs/Makefile
 
-export CFLAGS="-I${PREFIX}/include -I${PREFIX}/include/mozjs-91 -I${PREFIX}/lib/erlang/usr/include"
-export LDFLAGS="-L${PREFIX}/lib"
+export CFLAGS="${CFLAGS} -I${PREFIX}/include -I${PREFIX}/include/mozjs-91 -I${PREFIX}/lib/erlang/usr/include"
 export ERL_CFLAGS="${CFLAGS}"
 export ERL_LDFLAGS="${LDFLAGS}"
 # Make sure to set HOST_CC otherwise gcc is assumed
